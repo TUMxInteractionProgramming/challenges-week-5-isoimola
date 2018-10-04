@@ -73,7 +73,9 @@ strong {
     position: absolute;
     height: 100%;
     width: 40%;
-    background-color: #3F51B5; /* temporary background color to see the effect, is completely hidden now */
+    background-color: #3F51B5;
+    /* temporary background color to see the effect, is completely hidden now */
+    box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12);
 }
 
 #chat {
@@ -105,6 +107,7 @@ h1 {
     padding: 24px 16px 20px 16px;
     /* MOOCUS image alignment */
     position: relative; /* we need this, so that the image's absolute position is relative to the app bar */
+    box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
 }
 
     h1#left-app-bar {
@@ -195,6 +198,7 @@ li {
     width: 100%;
     display: flex;
     height: 72px;
+   
 }
 
     #tab-bar button {
@@ -227,12 +231,14 @@ li {
         /* #7 #icns #smile adjust fa size */
         font-size: 24px;
         margin: 18px 4px 18px 4px;
+
     }
 
 #chat-bar {
     display: flex;
     align-content: space-between;
     vertical-align: central;
+    box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
 }
 
 #emojis {
@@ -270,7 +276,7 @@ li {
     margin-bottom: 8px;
     margin-left: 2.5%;
     position: relative;
-    
+    box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
 }
 
     .message h3 {
@@ -314,7 +320,7 @@ li {
 
     .message.own {
         margin-left: calc(20% - 20px);
-        box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+        box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
     }
 
     /*floating action bar*/
@@ -354,10 +360,19 @@ Dialog: 24dp*/
     0px 4px 5px 0px rgba(0, 0, 0, 0.14),
     0px 1px 10px 0px rgba(0, 0, 0, 0.12); }
 
+
+/*chat*/
+/*message*/
+/*message own*/
+
 .md-whiteframe-6dp {
     box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
     0px 6px 10px 0px rgba(0, 0, 0, 0.14),
     0px 1px 18px 0px rgba(0, 0, 0, 0.12); }
+
+/*left app bar*/
+/*tab bar*/
+/*chat bar*/
 
 .md-whiteframe-8dp {
     box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2),
@@ -370,6 +385,7 @@ Dialog: 24dp*/
     0px 6px 30px 5px rgba(0, 0, 0, 0.12);
 }
 
+/*channel*/
 .md-whiteframe-24dp {
     box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2),
     0px 24px 38px 3px rgba(0, 0, 0, 0.14),
