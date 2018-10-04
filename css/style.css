@@ -1,4 +1,4 @@
-/** COLOR PALETTE:
+﻿/** COLOR PALETTE:
   *
   * Background: #F5F5F5 (GREY 100)
   * Primary Text: black
@@ -21,7 +21,49 @@ body {
     background-color: #F5F5F5;
 }
 
-button, strong {
+
+
+/*Buttons	Properties	Values
+All buttons	height	?
+ 	minimum width	?
+ 	text size	?
+ 	corner radius	?
+ 	left and right padding	16px
+ 	margin	8px
+ 	background color	white
+ 	border color	none
+ 	text color	primary text
+ 	text	uppercase
+    */
+
+button {
+    min-height: 32px;
+    min-width: 24px;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 1px;
+    padding: 0px 16px 0px 16px;
+    margin: 8px;
+    background-color: white;
+    border: none;
+    color: black;
+    text-transform: uppercase;
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+}
+
+
+.buttonprimary {
+    background-color: #3F51B5;
+    color: white;
+}
+
+.buttonaccent {
+    background-color: #CDDC39;
+    color: black;
+}
+
+
+strong {
     text-transform: uppercase;
 }
 
@@ -31,7 +73,6 @@ button, strong {
     position: absolute;
     height: 100%;
     width: 40%;
-
     background-color: #3F51B5; /* temporary background color to see the effect, is completely hidden now */
 }
 
@@ -55,41 +96,38 @@ button, strong {
 h1 {
     background-color: #3F51B5;
     color: white;
-
     /* app-bar: general settings for both bars */
     height: 64px;
     font-size: 20px;
     font-weight: 500;
-
     /* app-bar spacing */
     box-sizing: border-box;
     padding: 24px 16px 20px 16px;
-
     /* MOOCUS image alignment */
     position: relative; /* we need this, so that the image's absolute position is relative to the app bar */
 }
 
-h1#left-app-bar {
-    padding-left: 72px;
-}
+    h1#left-app-bar {
+        padding-left: 72px;
+    }
 
-h1#left-app-bar img {
-    position: absolute;
-    left: 16px;
-    bottom: 0;
-}
+        h1#left-app-bar img {
+            position: absolute;
+            left: 16px;
+            bottom: 0;
+        }
 
-h1 a {
-    color: white;
-}
+    h1 a {
+        color: white;
+    }
 
-h1 i {
-    /* #7 #icns #str  */
-    position:absolute;
-    right: 16px;
-    /* #7 #icns #small adjust icon size */
-    font-size:24px;
-}
+    h1 i {
+        /* #7 #icns #str  */
+        position: absolute;
+        right: 16px;
+        /* #7 #icns #small adjust icon size */
+        font-size: 24px;
+    }
 
 /* CHANNELS LIST */
 
@@ -112,42 +150,40 @@ li {
     position: relative;
 }
 
-li .channel-meta {
-    /* right-align channel-meta icons */
-    position: absolute;
-    right: 16px;
-    top: 12px;
+    li .channel-meta {
+        /* right-align channel-meta icons */
+        position: absolute;
+        right: 16px;
+        top: 12px;
+        /* #8 #channel #centered blue boxes */
+        display: flex;
+    }
 
-    /* #8 #channel #centered blue boxes */
-    display:flex;
-}
+        li .channel-meta span {
+            /* #8 #channel #boxes for the additional metadata */
+            /* color */
+            background-color: #3F51B5;
+            color: white;
+            /* appearance */
+            margin: 2px;
+            padding: 2px;
+            border-radius: 2px;
+            font-size: 10px;
+            /* #8 #channel #centered blue boxes' text content */
+            align-self: center;
+        }
 
-li .channel-meta span {
-    /* #8 #channel #boxes for the additional metadata */
-    /* color */
-    background-color: #3F51B5;
-    color: white;
-    /* appearance */
-    margin: 2px;
-    padding: 2px;
-    border-radius: 2px;
-    font-size: 10px;
-
-    /* #8 #channel #centered blue boxes' text content */
-    align-self:center;
-}
-
-li i.fas, li i.far  {
-    /* #7 #icns #small in channels view */
-    font-size: 24px;
-    padding-left: 4px;
-}
+    li i.fas, li i.far {
+        /* #7 #icns #small in channels view */
+        font-size: 24px;
+        padding-left: 4px;
+    }
 
 
-li.selected {
-    color: #3F51B5;
-    border-left: 4px solid #3F51B5;
-}
+    li.selected {
+        color: #3F51B5;
+        border-left: 4px solid #3F51B5;
+    }
 
 /* TAB BAR */
 
@@ -158,49 +194,51 @@ li.selected {
     bottom: 0;
     width: 100%;
     display: flex;
-}
-
-#tab-bar button, #chat-bar button {
-    background-color: white;
-    border: none;
-    font-size: 13px;
-    width: 33%;
     height: 72px;
-    padding: 16px;
-
-    /* flexify the buttons by growing them equally */
-    flex-grow: 1;
 }
 
-#tab-bar button.selected {
-    color: #3F51B5;
-    border-bottom: 4px solid #3F51B5;
-}
+    #tab-bar button {
+        font-size: 13px;
+        width: 33%;
+        /* flexify the buttons by growing them equally */
+        flex-grow: 1;
+        border: none;
+        box-shadow: none;
+    }
 
-#tab-bar button i {
-    /* #7 #icns #tab select i instead of img and adjust font size */
-    display: block;
-    font-size: 24px;
-    margin: 0 auto 4px auto;
-}
+        #tab-bar button.selected {
+            color: #3F51B5;
+            border-bottom: 4px solid #3F51B5;
+        }
 
-/* CHAT BAR */
+        #tab-bar button i {
+            /* #7 #icns #tab select i instead of img and adjust font size */
+            display: block;
+            font-size: 24px;
+            margin: 0 auto 4px auto;
+        }
+          
+    /* CHAT BAR */
 
-#chat-bar button {
-    /* override button styles. We set the chat bar to appear like a tab-bar above. This overrides the tab bar's button scaling */
-    width: auto;
-    flex-grow: 0;
+    #chat-bar button {
+        /* override button styles. We set the chat bar to appear like a tab-bar above. This overrides the tab bar's button scaling */
+        min-width: 56px;
+        max-height: 36px;
+        /* #7 #icns #smile adjust fa size */
+        font-size: 24px;
+        margin: 18px 4px 18px 4px;
+    }
 
-    /* #7 #icns #smile adjust fa size */
-    font-size: 24px;
+#chat-bar {
+    display: flex;
+    align-content: space-between;
+    vertical-align: central;
 }
 
 #emojis {
     /* emoji menu */
     /* colors and borders */
-    background-color:white;
-    border: 1px solid black;
-
+    /*border: 1px solid black;*/
     /* size & alignment */
     position: absolute;
     box-sizing: border-box;
@@ -208,15 +246,11 @@ li.selected {
     width: 300px;
     left: 16px;
     top: -284px;
-    padding: 16px;
-
-    /* font and left-align text */
+   /* font and left-align text */
     text-align: left;
     font-size: 28px;
-
     /* scroll when it has too many emojis */
     overflow-y: auto;
-
     /* hide the #smile menu */
     display: none;
 }
@@ -229,7 +263,6 @@ li.selected {
     /* alignment */
     flex-grow: 1;
 }
-
 /* MESSAGES */
 
 .message {
@@ -237,51 +270,119 @@ li.selected {
     margin-bottom: 8px;
     margin-left: 2.5%;
     position: relative;
+    
 }
 
-.message h3 {
-    /* Message-meta medium-sized text, non-italic */
-    font-size: medium;
+    .message h3 {
+        /* Message-meta medium-sized text, non-italic */
+        font-size: medium;
+        /* messages distribute metadata content evenly with flexbox */
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
 
-    /* messages distribute metadata content evenly with flexbox */
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-}
+        .message h3 a {
+            /* What3words link is primary test */
+            color: black;
+            width: 30%;
+        }
 
-.message h3 a {
-    /* What3words link is primary test */
-    color: black;
+        .message h3 em {
+            /* Larger text, non-italic*/
+            font-size: larger;
+            font-style: normal;
+            width: 20%;
+            text-align: right;
+        }
 
-    width: 30%;
-}
+    .message p {
+        background-color: white;
+        padding: 16px;
+        text-shadow: 2px;
+    }
 
-.message h3 em {
-    /* Larger text, non-italic*/
-    font-size: larger;
-    font-style: normal;
+    .message button {
+        /* +5 min. button*/
+        /* right/bottom alignment of button */
+        position: absolute;
+        right: 8px;
+        bottom: 8px;
+        background-color: #CDDC39;
+        color: black;
+    }
 
-    width: 20%;
-    text-align: right;
-}
+    .message.own {
+        margin-left: calc(20% - 20px);
+        box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+    }
 
-.message p {
-    background-color: white;
+    /*floating action bar*/
+.float {
+    position: fixed;
     padding: 16px;
-}
-
-.message button {
-    /* +5 min. button*/
+    font-size: 24px;
+    bottom: 88px;
+    left: calc(40% - 72px);
     background-color: #CDDC39;
     color: black;
-    text-transform: uppercase;
+    border-radius: 50%;
+    text-align: center;
 
-    /* right/bottom alignment of button */
-    position: absolute;
-    right: 8px;
-    bottom: 8px;
 }
 
-.message.own {
-    margin-left: 17.5%;
+.myfloat{
+    margin-top: 22px;
 }
+
+
+/*Nav drawer: 16dp
+App bar: 4dp
+Card: 1dp to 8dp
+FAB: 6dp
+Button: 2dp to 8dp
+Dialog: 24dp*/
+
+
+.md-whiteframe-2dp {
+    box-shadow:  0px 1px 5px 0px rgba(0, 0, 0, 0.2),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+    0px 3px 1px -2px rgba(0, 0, 0, 0.12); }
+
+.md-whiteframe-4dp {
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+    0px 4px 5px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 10px 0px rgba(0, 0, 0, 0.12); }
+
+.md-whiteframe-6dp {
+    box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+    0px 6px 10px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 18px 0px rgba(0, 0, 0, 0.12); }
+
+.md-whiteframe-8dp {
+    box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2),
+    0px 8px 10px 1px rgba(0, 0, 0, 0.14),
+    0px 3px 14px 2px rgba(0, 0, 0, 0.12); }
+
+.md-whiteframe-16dp {
+    box-shadow: 0px 8px 10px -5px rgba(0, 0, 0, 0.2), 
+    0px 16px 24px 2px rgba(0, 0, 0, 0.14), 
+    0px 6px 30px 5px rgba(0, 0, 0, 0.12);
+}
+
+.md-whiteframe-24dp {
+    box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2),
+    0px 24px 38px 3px rgba(0, 0, 0, 0.14),
+    0px 9px 46px 8px rgba(0, 0, 0, 0.12); }
+
+
+
+
+
+
+
+
+
+
+
+
