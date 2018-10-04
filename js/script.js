@@ -130,15 +130,15 @@ function createMessageElement(messageObject) {
     var expiresIn = Math.round((messageObject.expiresOn - Date.now()) / 1000 / 60);
 
     // #8 message element
-    return '<div class="message'+
+    return '<div class="message' +
         //this dynamically adds the class 'own' (#own) to the #message, based on the
         //ternary operator. We need () in order to not disrupt the return.
         (messageObject.own ? ' own' : '') +
         '">' +
-        '<h3><a href="http://w3w.co/' + messageObject.createdBy + '" target="_blank">'+
+        '<h3><a href="http://w3w.co/' + messageObject.createdBy + '" target="_blank">' +
         '<strong>' + messageObject.createdBy + '</strong></a>' +
         messageObject.createdOn.toLocaleString() +
-        '<em>' + expiresIn+ ' min. left</em></h3>' +
+        '<em>' + expiresIn + ' min. left</em></h3>' +
         '<p>' + messageObject.text + '</p>' +
         '<button>+5 min.</button>' +
         '</div>';
