@@ -1,3 +1,7 @@
+/**global array for channels */
+
+
+
 /** #7 #chlob #new: the new yummy channel */
 
 var yummy = {
@@ -46,3 +50,43 @@ var octoberfest = {
     expiresIn: 60,
     messageCount: 321
 };
+
+
+var channels = [yummy, sevencontinents, killerapp, firstpersononmars, octoberfest];
+
+//new, favorites descending New above old, more above less, and starred above unstarred.
+
+
+
+var byDate = channels.slice(0);
+function compareCreatedOn(a,b) {
+    if (a.createdOn < b.createdOn) {
+        return -1; 
+    } else {
+        return 1; 
+    }
+}
+channels.sort(compareCreatedOn);
+console.log(byDate);
+
+var byFavourite = channels.slice(0);
+function compareMessageCount(a, b) {
+    if (a.messageCount < b.messageCount) {
+        return -1;
+    } else {
+        return 1;
+    }
+}
+channels.sort(compareMessageCount);
+console.log(byFavourite);
+
+var byStarred = channels.slice(0);
+function compareStarred(a, b) {
+    if (a.starred = true) {
+        return -1;
+    } else {
+        return 1;
+    }
+}
+channels.sort(compareStarred);
+console.log(byStarred);

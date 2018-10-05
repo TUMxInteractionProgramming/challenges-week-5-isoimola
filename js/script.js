@@ -145,16 +145,23 @@ function createMessageElement(messageObject) {
 }
 
 
-function listChannels() {
+
     // #8 channel onload
     //$('#channels ul').append("<li>New Channel</li>")
 
-    // #8 five new channels
-    $('#channels ul').append(createChannelElement(yummy));
-    $('#channels ul').append(createChannelElement(sevencontinents));
-    $('#channels ul').append(createChannelElement(killerapp));
-    $('#channels ul').append(createChannelElement(firstpersononmars));
-    $('#channels ul').append(createChannelElement(octoberfest));
+function listChannels() {
+    console.log('add channels:', channels);
+    for (var i = 0; i < channels.length; i++) {console.log('add channel:', channels[i]);
+
+        $('#channels ul').append(createChannelElement(channels[i]));
+
+        // #8 five new channels
+        // $('#channels ul').append(createChannelElement(yummy));
+        //$('#channels ul').append(createChannelElement(sevencontinents));
+        //$('#channels ul').append(createChannelElement(killerapp));
+        //$('#channels ul').append(createChannelElement(firstpersononmars));
+        //$('#channels ul').append(createChannelElement(octoberfest));
+    }
 }
 
 /**
@@ -193,3 +200,5 @@ function createChannelElement(channelObject) {
     // return the complete channel
     return channel;
 }
+
+
