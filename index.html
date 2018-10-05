@@ -25,15 +25,24 @@
     <!-- embed external JavaScript file for app interaction -->
     <script src="js/script.js"></script>
 
+    <!-- emojis -->
+    <script src="js/emojis-list.js"></script>
+    
 </head>
 
 <!-- #8 #channel #onload all channels when the body has loaded -->
 <body onload="listChannels()">
 
+    <script src="js/emojis-list.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        var emojis = require('emojis-list')
+        console.log(emojis[0])
+    </script>
+
     <!-- channel area -->
     <div id="channels">
 
-         <!-- APP BAR for APP TITLE -->
+        <!-- APP BAR for APP TITLE -->
         <h1 id="left-app-bar">
             <img src="http://ip.lfe.mw.tum.de/sections/moocus.png" alt="Moocus, the chatty duck!" style="height: 56px;">
             chatter|app
@@ -45,49 +54,49 @@
             <!-- This document will trigger many warning and errors when using the W3C Validator due to comments in comments, which is not allowed. We let them in here so you can check out the solution for Challenge 7. -->
             <!-- #7  calls our switchChannel with the corresponding OBJECT as an argument -->
             <!-- <li onclick="switchChannel(yummy)">
-        #Yummy
-        <span class="channel-meta"> -->
+            #Yummy
+            <span class="channel-meta"> -->
             <!-- #7  replace images with icons-->
             <!-- <i class="far fa-star"></i>
-                <i class="fas fa-chevron-right"></i>
-            </span>
-        </li> -->
+                    <i class="fas fa-chevron-right"></i>
+                </span>
+            </li> -->
             <!-- #7  calls our switchChannel with the corresponding OBJECT as an argument -->
             <!-- <li class="selected" onclick="switchChannel(sevencontinents)">
-        #SevenContinents
-        <span class="channel-meta"> -->
+            #SevenContinents
+            <span class="channel-meta"> -->
             <!-- #7  replace images with icons-->
             <!-- <i class="far fa-star"></i>
-                <i class="fas fa-chevron-right"></i>
-            </span>
-        </li> -->
+                    <i class="fas fa-chevron-right"></i>
+                </span>
+            </li> -->
             <!-- #7  calls our switchChannel with the corresponding OBJECT as an argument -->
             <!-- <li onclick="switchChannel(killerapp)">
-        #KillerApp
-        <span class="channel-meta"> -->
+            #KillerApp
+            <span class="channel-meta"> -->
             <!-- #7  replace images with icons-->
             <!-- <i class="far fa-star"></i>
-                <i class="fas fa-chevron-right"></i>
-            </span>
-        </li> -->
+                    <i class="fas fa-chevron-right"></i>
+                </span>
+            </li> -->
             <!-- #7  calls our switchChannel with the corresponding OBJECT as an argument -->
             <!-- <li onclick="switchChannel(firstpersononmars)">
-        #FirstPersonOnMars
-        <span class="channel-meta"> -->
+            #FirstPersonOnMars
+            <span class="channel-meta"> -->
             <!-- #7  replace images with icons-->
             <!-- <i class="far fa-star"></i>
-                <i class="fas fa-chevron-right"></i>
-            </span>
-        </li> -->
+                    <i class="fas fa-chevron-right"></i>
+                </span>
+            </li> -->
             <!-- #7  calls our switchChannel with the corresponding OBJECT as an argument -->
             <!-- <li onclick="switchChannel(octoberfest)">
-        #Octoberfest
-        <span class="channel-meta"> -->
+            #Octoberfest
+            <span class="channel-meta"> -->
             <!-- #7  replace images with icons-->
             <!-- <i class="far fa-star"></i>
-                <i class="fas fa-chevron-right"></i>
-            </span>
-        </li> -->
+                    <i class="fas fa-chevron-right"></i>
+                </span>
+            </li> -->
 
         </ul>
         <!-- floating action button-->
