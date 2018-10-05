@@ -33,13 +33,7 @@
 <!-- #8 #channel #onload all channels when the body has loaded -->
 <body onload="listChannels()">
 
-    <script src="js/emojis-list.js" type="text/javascript" charset="utf-8"></script>
-    <script>
-        var emojis = require('emojis-list')
-        console.log(emojis[0])
-    </script>
-
-    <!-- channel area -->
+      <!-- channel area -->
     <div id="channels">
 
         <!-- APP BAR for APP TITLE -->
@@ -202,7 +196,10 @@
                 <!-- #7 replacing icons -->
                 <i class="far fa-smile"></i>
             </button>
-            <div id="emojis" class="md-whiteframe-8dp">&#x1F601; &#x1F602; &#x1F603; &#x1F604; &#x1F605; &#x1F606; &#x1F607;</div>
+            <div id="emojis" class="md-whiteframe-8dp">
+                <script>var emojis = require('emojis-list')
+                    console.log(emojis[0])</script>
+            </div>
             <!-- #8 create a new input element which accepts text and has a prefill as well as a character limit.
                    It also gets an id -->
             <input type="text" placeholder="Message..." maxlength="140" id="message">
