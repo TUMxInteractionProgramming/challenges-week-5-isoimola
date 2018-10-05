@@ -259,6 +259,7 @@ li {
     overflow-y: auto;
     /* hide the #smile menu */
     display: none;
+    background-color: white;
 }
 
 /* #8 #input #styles for font, border, and alignment */
