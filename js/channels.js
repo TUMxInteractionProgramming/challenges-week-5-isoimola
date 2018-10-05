@@ -56,37 +56,36 @@ var channels = [yummy, sevencontinents, killerapp, firstpersononmars, octoberfes
 
 //new, favorites descending New above old, more above less, and starred above unstarred.
 
-
-
-var byDate = channels.slice(0);
-function compareCreatedOn(a,b) {
+var created = channels.slice(0);
+function compareCreatedOn(a, b) {
     if (a.createdOn < b.createdOn) {
-        return -1; 
-    } else {
-        return 1; 
-    }
-}
-channels.sort(compareCreatedOn);
-console.log(byDate);
-
-var byFavourite = channels.slice(0);
-function compareMessageCount(a, b) {
-    if (a.messageCount < b.messageCount) {
         return -1;
     } else {
         return 1;
     }
 }
-channels.sort(compareMessageCount);
-console.log(byFavourite);
+channels.sort(compareCreatedOn);
+console.log(created);
 
-var byStarred = channels.slice(0);
+var trending = channels.slice(0);
+function compareMessageCount(a, b) {
+    if (a.messageCount > b.messageCount) {
+        return -1; 
+    } else {
+        return 1;
+    }
+}
+channels.sort(compareMessageCount);
+console.log(trending);
+
+var favourite = channels.slice(0);
 function compareStarred(a, b) {
-    if (a.starred = true) {
+    if (a.starred > b.starred) {
         return -1;
     } else {
         return 1;
     }
 }
 channels.sort(compareStarred);
-console.log(byStarred);
+console.log(favourite);
+

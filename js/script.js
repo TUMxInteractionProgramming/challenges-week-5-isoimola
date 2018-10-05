@@ -77,12 +77,17 @@ function selectTab(tabId) {
 
 /**
  * toggle (show/hide) the emojis menu
+ *
  */
+
+
 function toggleEmojis() {
-    $('#emojis').toggle(); // #toggle
-}
+        $('#emojis').toggle(); // #toggle
+    }
+
 
 /**
+ *  * 
  * #8 This #constructor function creates a new chat #message.
  * @param text `String` a message text
  * @constructor
@@ -113,7 +118,7 @@ function sendMessage() {
     $('#messages').append(createMessageElement(message));
 
     // #8 messages will scroll to a certain point if we apply a certain height, in this case the overall scrollHeight of the messages-div that increases with every message;
-    // it would also scroll to the bottom when using a very high number (e.g. 1000000000);
+    // it would also scroll to the bottom when usng a very high number(e.g. 1000000000);
     $('#messages').scrollTop($('#messages').prop('scrollHeight'));
 
     // #8 clear the message input
@@ -149,20 +154,25 @@ function createMessageElement(messageObject) {
     // #8 channel onload
     //$('#channels ul').append("<li>New Channel</li>")
 
-function listChannels() {
+function listChannels(){
+    
     console.log('add channels:', channels);
-    for (var i = 0; i < channels.length; i++) {console.log('add channel:', channels[i]);
-
+        for (var i = 0; i < channels.length; i++) {console.log('add channel:', channels[i]);
+            
+            
         $('#channels ul').append(createChannelElement(channels[i]));
 
+            
         // #8 five new channels
         // $('#channels ul').append(createChannelElement(yummy));
         //$('#channels ul').append(createChannelElement(sevencontinents));
         //$('#channels ul').append(createChannelElement(killerapp));
         //$('#channels ul').append(createChannelElement(firstpersononmars));
         //$('#channels ul').append(createChannelElement(octoberfest));
-    }
+    } 
+    
 }
+
 
 /**
  * #8 This function makes a new jQuery #channel <li> element out of a given object
